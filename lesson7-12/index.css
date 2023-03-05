@@ -28,6 +28,7 @@ body {
 /* ---------------------- */
 
 
+/* ---- copied styling from https://github.com/iamshaunjp/angular-js-playlist ---- */
 h1,h2,h3{
     margin: 0;
   }
@@ -143,3 +144,4 @@ h1,h2,h3{
     cursor: pointer;
     margin-left: 10px;
   }
+  /* ----------------------------------------------------------------------------- */

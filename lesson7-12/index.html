@@ -23,7 +23,10 @@
     <title>Lesson 7-12</title>
 </head>
 <body>
+    <!-- including the header.html file using ng-include -->
     <!-- <ng-include src="'./header.html'"></ng-include> -->
+
+    <!-- using ng-include as attribute is more HTML semantic -->
     <header ng-include="'./header.html'"></header>
 
     <!-- Container -->
@@ -33,23 +36,31 @@
 
         <h2>Employees</h2>
         <div class="content">
+            <!-- the input value will be stored on 'search' model -->
             <input type="text" ng-model="search">
 
             <ul>
+                <!-- loop through the employees scope object using ng-repeat -->
+                <!-- apply filters and used 'search' model for searching -->
                 <li ng-repeat="employee in employees | orderBy: 'name' | filter: search" ng-show="employee.available">{{ employee.name }} - {{ employee.rate | currency: '₱' }}</li>
+                <!-- using ng-show to show employees that are available -->
             </ul>
         </div>
         
         <div>
+            <!-- output the 'message' scope object using expressions --> 
             <h1>{{ message }}</h1>
 
             <form>
                 <label for="fname">First name:</label>
+                <!-- store the value to 'fname' model -->
                 <input type="text" name="fname" id="fname" ng-model="fname">
 
                 <label for="lname">Last name:</label>
+                <!-- store the value to 'lname' model -->
                 <input type="text" name="lname" id="lname" ng-model="lname">
 
+                <!-- if fname and lname is not null then show the 'successMessage' scope object, if not then show a different message -->
                 <p>{{ fname && lname != null 
                     ? 
                         successMessage 
@@ -58,7 +69,6 @@
                 </p>
             </form>
         </div>
-
     </div>
 
 </body>
