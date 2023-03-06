@@ -13,29 +13,41 @@
         <h3>Add employee</h3>
         <!-- using ng-submit to invoke 'addEmployee' function when form is submitted -->
         <form ng-submit="addEmployee()">
-            <label for="fullname">Fullname</label>
-            <!-- store the input value to fullname model -->
-            <input type="text" id="fullname" name="fullname" ng-model="fullname">
+            <div class="row">
+                <div class="col">
+                    <label for="fullname">Fullname</label>
+                    <!-- store the input value to fullname model -->
+                    <input type="text" id="fullname" name="fullname" ng-model="fullname">
+                </div>
+                
+                <div class="col">
+                    <label for="position">Position</label>
+                    <!-- store the input value to position model -->
+                    <input type="text" id="position" name="position" ng-model="position">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <label for="rate">Rate</label>
+                    <!-- store the input value to rate model -->
+                    <input type="number" id="rate" name="rate" ng-model="rate">
+                </div>
 
-            <label for="position">Position</label>
-            <!-- store the input value to position model -->
-            <input type="text" id="position" name="position" ng-model="position"><br>
-
-            <label for="rate">Rate</label>
-            <!-- store the input value to rate model -->
-            <input type="number" id="rate" name="rate" ng-model="rate">
-
+                <div class="col">
+                    <label for="age">Age</label>
+                    <!-- store the input value to age model -->
+                    <input type="number" id="age" name="age" ng-model="age">
+                </div>
+            </div>
+            
             <label for="available">Available</label>
             <!-- store the input value to available model -->
             <select name="available" id="available" ng-model="available">
                 <option value="True">True</option>
                 <option value="False">False</option>
             </select><br>
-
-            <label for="age">Age</label>
-            <!-- store the input value to age model -->
-            <input type="number" id="age" name="age" ng-model="age">
-
+            
             <button type="submit">Save</button>
         </form>
         
