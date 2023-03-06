@@ -1,9 +1,9 @@
 <div>
     <!-- accessing the jokes scope object from the API call from EmployeeController -->
-    <ul ng-repeat="joke in jokes">
+    <ul ng-repeat="joke in jokes" class="jokes">
         <!-- accessing the type, setup and punchline properties -->
-        <li>Type: {{ joke.type }}</li>
-        <li>Setup: {{ joke.setup }}</li>
-        <li>Puncline: {{ joke.punchline }}</li>
+        <li>Type - {{ joke.type }}</li>
+        <li>Joke - {{ joke.setup }}</li>
+        <li>Puncline - {{ joke.punchline }}</li>
     </ul>
 </div>

@@ -44,6 +44,18 @@ select option {
   font-size: 1rem;
   font-weight: bold;
 }
+
+.jokes {
+  list-style-type: none;
+  height: auto;
+  padding: 30px;
+}
+
+.jokes li {
+  font-size: 3.5rem;
+  line-height: 90px;
+  font-weight: bold;
+}
 /* ---------------------- */
 
 
