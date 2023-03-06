@@ -17,13 +17,25 @@
                 <div class="col">
                     <label for="fullname">Fullname</label>
                     <!-- store the input value to fullname model -->
-                    <input type="text" id="fullname" name="fullname" ng-model="fullname">
+                    <input 
+                        type="text" 
+                        id="fullname" 
+                        name="fullname" 
+                        ng-model="fullname"
+                        placeholder="Enter fullname"
+                    >
                 </div>
                 
                 <div class="col">
                     <label for="position">Position</label>
                     <!-- store the input value to position model -->
-                    <input type="text" id="position" name="position" ng-model="position">
+                    <input 
+                        type="text" 
+                        id="position" 
+                        name="position" 
+                        ng-model="position"
+                        placeholder="Enter position"    
+                    >
                 </div>
             </div>
             
@@ -31,19 +43,37 @@
                 <div class="col">
                     <label for="rate">Rate</label>
                     <!-- store the input value to rate model -->
-                    <input type="number" id="rate" name="rate" ng-model="rate">
+                    <input 
+                        type="number" 
+                        step="100" 
+                        min="100" 
+                        max="1000" 
+                        id="rate" 
+                        name="rate" 
+                        ng-model="rate"
+                        placeholder="Enter hourly rate"
+                    >
                 </div>
 
                 <div class="col">
                     <label for="age">Age</label>
                     <!-- store the input value to age model -->
-                    <input type="number" id="age" name="age" ng-model="age">
+                    <input 
+                        type="number" 
+                        id="age" 
+                        name="age" 
+                        min="18"
+                        max="60"
+                        ng-model="age"
+                        placeholder="Enter age"
+                    >
                 </div>
             </div>
             
             <label for="available">Available</label>
             <!-- store the input value to available model -->
             <select name="available" id="available" ng-model="available">
+                <option value=""></option>
                 <option value="True">True</option>
                 <option value="False">False</option>
             </select><br>

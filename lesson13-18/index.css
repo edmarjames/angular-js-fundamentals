@@ -32,6 +32,18 @@ body {
     width: 30px;
     border-radius: 40px;
 }
+
+select {
+  margin: 15px auto;
+  width: 50%;
+  height: 30px;
+  border-radius: 30px;
+}
+
+select option {
+  font-size: 1rem;
+  font-weight: bold;
+}
 /* ---------------------- */
 
 
