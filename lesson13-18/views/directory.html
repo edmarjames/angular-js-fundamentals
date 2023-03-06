@@ -1,0 +1,42 @@
+<!-- Container -->
+<div class="container">
+    <div class="content">
+        <button ng-click="order = 'name'">Order by name</button>
+        <button ng-click="order = 'age'">Order by age</button>
+        <button ng-click="removeAllEmployee()">Remove all employee</button>
+        <input type="text" ng-model="search">
+
+        <h3>Add employee</h3>
+        <form ng-submit="addEmployee()">
+            <label for="fullname">Fullname</label>
+            <input type="text" id="fullname" name="fullname" ng-model="fullname">
+
+            <label for="position">Position</label>
+            <input type="text" id="position" name="position" ng-model="position"><br>
+
+            <label for="rate">Rate</label>
+            <input type="number" id="rate" name="rate" ng-model="rate">
+
+            <label for="available">Available</label>
+            <select name="available" id="available" ng-model="available">
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select><br>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" ng-model="age">
+
+            <button type="submit">Save</button>
+        </form>
+        
+        <ul>
+            <li ng-repeat="employee in employees | orderBy: order | filter: search ">
+                <img ng-src="{{ employee.src }}" ng-show="employee.src" alt="avatar" class="img-layout">
+                <h3>{{ employee.name }}</h3>
+                <div class="remove" ng-click="removeEmployee(employee)">x</div>
+                <span>{{ employee.age }}</span>
+            </li>
+        </ul>
+    </div>
+    
+</div>
