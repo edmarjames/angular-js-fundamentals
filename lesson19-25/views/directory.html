@@ -1,0 +1,99 @@
+<!-- Container -->
+<div class="container">
+    <div class="content">
+        <!-- using ng-click to change the value of 'order' to 'name' when button is click -->
+        <button ng-click="order = 'name'">Order by name</button>
+        <!-- using ng-click to change the value of 'order' to 'age' when button is click -->
+        <button ng-click="order = 'age'">Order by age</button>
+        <!-- using ng-click to invoke the 'removeAllEmployee' function when button is click -->
+        <button ng-click="removeAllEmployee()">Remove all employee</button>
+        <!-- store the input value to search model -->
+        <input type="text" ng-model="search">
+
+        <h3>Add employee</h3>
+        <!-- using ng-submit to invoke 'addEmployee' function when form is submitted -->
+        <form ng-submit="addEmployee()">
+            <div class="row">
+                <div class="col">
+                    <label for="fullname">Fullname</label>
+                    <!-- store the input value to fullname model -->
+                    <input 
+                        type="text" 
+                        id="fullname" 
+                        name="fullname" 
+                        ng-model="fullname"
+                        placeholder="Enter fullname"
+                    >
+                </div>
+                
+                <div class="col">
+                    <label for="position">Position</label>
+                    <!-- store the input value to position model -->
+                    <input 
+                        type="text" 
+                        id="position" 
+                        name="position" 
+                        ng-model="position"
+                        placeholder="Enter position"    
+                    >
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <label for="rate">Rate</label>
+                    <!-- store the input value to rate model -->
+                    <input 
+                        type="number" 
+                        step="100" 
+                        min="100" 
+                        max="1000" 
+                        id="rate" 
+                        name="rate" 
+                        ng-model="rate"
+                        placeholder="Enter hourly rate"
+                    >
+                </div>
+
+                <div class="col">
+                    <label for="age">Age</label>
+                    <!-- store the input value to age model -->
+                    <input 
+                        type="number" 
+                        id="age" 
+                        name="age" 
+                        min="18"
+                        max="60"
+                        ng-model="age"
+                        placeholder="Enter age"
+                    >
+                </div>
+            </div>
+            
+            <label for="available">Available</label>
+            <!-- store the input value to available model -->
+            <select name="available" id="available" ng-model="available">
+                <option value=""></option>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select><br>
+            
+            <button type="submit">Save</button>
+        </form>
+        
+        <ul>
+            <!-- using ng-repeat to loop through the employees scope object, adds filtering -->
+            <li ng-repeat="employee in employees | orderBy: order | filter: search ">
+                
+                <!-- using ng-src to get the source of the image, using ng-show if the value of 'employee.src' is not null -->
+                <img ng-src="{{ employee.src }}" ng-show="employee.src" alt="avatar" class="img-layout">
+                <h3>{{ employee.name }}</h3>
+
+                <!-- using ng-click to invoke 'removeEmployee' function when div is clicked -->
+                <div class="remove" ng-click="removeEmployee(employee)">x</div>
+                <span>{{ employee.age }}</span>
+            </li>
+        </ul>
+    </div>
+    
+</div>
