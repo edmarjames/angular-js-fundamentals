@@ -1,5 +1,5 @@
 // register the 'ngRoute' as dependency to our module for us to use the '$routeProvider'
-const myApp = angular.module('myApp', ['ngRoute']);
+const myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
 
 
 // register '$routeProvider' as dependency on 'config' method
@@ -134,7 +134,7 @@ myApp.controller('EmployeeController', ['$scope', '$http', function($scope, $htt
         // invoke the clearFields function
         clearFields();
         // show an alert that adding of employee is successful
-        alert('Employee successfully added');
+        // alert('Employee successfully added');
     };
 
     // remove all employee from the employees scope object
@@ -164,5 +164,15 @@ myApp.controller('EmployeeController', ['$scope', '$http', function($scope, $htt
         replace -> allows to replace the name of the custom directive HTML tag with the outermost element of its view or templateUrl. On this case the outermost element of random.html is div. so instead of 'random-employee' it will be shown as 'div' in the console. 
 
         to allow it just add replace and set the value to 'true'
+
+
+    2. animations
+        to use Angular.js animations include the CDN to the index.html file.
+        CDN can be found here https://docs.angularjs.org/api/ngAnimate. Then register 'ngAnimate' as dependency to our module
+
+
+
+
+
 */
 

@@ -81,7 +81,7 @@
             <button type="submit">Save</button>
         </form>
         
-        <ul>
+        <ul id="employee-list">
             <!-- using ng-repeat to loop through the employees scope object, adds filtering -->
             <li ng-repeat="employee in employees | orderBy: order | filter: search ">
                 
