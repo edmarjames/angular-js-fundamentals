@@ -28,7 +28,12 @@ myApp.config(['$routeProvider', function($routeProvider) {
             controller: 'EmployeeController'
         })
         .when('/contact', {
-            templateUrl: './views/contact.html'
+            templateUrl: './views/contact.html',
+            controller: 'ContactController'
+        })
+        .when('/contact-success', {
+            templateUrl: './views/success.html',
+            controller: 'ContactController'
         })
         .otherwise({
             redirectTo: '/home'
@@ -158,6 +163,14 @@ myApp.controller('EmployeeController', ['$scope', '$http', function($scope, $htt
     });
 }])
 
+myApp.controller('ContactController', ['$scope', '$location', function($scope, $location) {
+
+    $scope.sendMessage = () => {
+        $location.path('/contact-success');
+    };
+
+}]);
+
 /* 
     1. transclude and replace
         transclude -> allows to display what is inside the custom directive tag to be displayed in the view. 
@@ -187,5 +200,12 @@ myApp.controller('EmployeeController', ['$scope', '$http', function($scope, $htt
         ng-disabled -> disables an element conditionally
         Syntax:
             <button ng-disabled="contactForm.$invalid"></button>
+
+
+    4. $location service
+        acts like Navigate or useNavigate in react that let's user navigate to another route/url when an event happens
+
+        Syntax:
+            $location.path('/url');
 */
 
