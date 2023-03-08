@@ -3,7 +3,10 @@ const myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
 
 
 // register '$routeProvider' as dependency on 'config' method
-myApp.config(['$routeProvider', function($routeProvider) {
+myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+
+    // allows use to set a URL on the same domain with JavaScript
+    // $locationProvider.html5Mode(true);
 
     // using '$routeProvider' to declare the routes to our app
     /* 
@@ -203,9 +206,21 @@ myApp.controller('ContactController', ['$scope', '$location', function($scope, $
 
 
     4. $location service
-        acts like Navigate or useNavigate in react that let's user navigate to another route/url when an event happens
+        acts like Navigate or useNavigate in 'react' that let's user navigate to another route/url when an event happens
 
         Syntax:
             $location.path('/url');
-*/
+
+    
+    5. pretty url's
+        to make our url's pretty we need to use the $locationProvider service on 'config' method
+
+        Syntax:
+            $locationProvider.html5Mode(true);
+
+        then define the base url on our index.html file
+
+        Syntax:
+            <base href="/">
+*/          
 
