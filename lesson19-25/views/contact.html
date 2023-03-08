@@ -1,4 +1,7 @@
 <div class="content">
+    <!-- alerts for validation -->
+
+    <!-- using $touched and $invalid attribute to check if an input is touched and invalid -->
     <div ng-show="contactForm.name.$touched && contactForm.name.$invalid" class="alert alert-danger alert-dismissible fade show w-75" role="alert">
         Enter a valid name!
         <button type="button" class="close shadow-none" data-dismiss="alert" aria-label="Close">
@@ -17,6 +20,8 @@
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
+
+    <!-- contact form -->
     <form name="contactForm" ng-submit="sendMessage()" novalidate>
         <input 
             type="text" 
@@ -38,6 +43,8 @@
             ng-model="contact.message" 
             ng-required="true"
         ></textarea>
+
+        <!-- using ng-disabled to conditionally disable the button whenever the form is valid or invalid -->
         <input type="submit" value="send" ng-disabled="contactForm.$invalid">
     </form>
 </div>

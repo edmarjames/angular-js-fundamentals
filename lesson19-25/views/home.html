@@ -1,10 +1,13 @@
-<h1>Homepage</h1>
+<div class="content">
+    <h1>Homepage</h1>
 
-<!-- Title -->
-<h1>Lesson 13 to 18</h1>
+    <!-- Title -->
+    <h1>Lesson 13 to 18</h1>
 
-<!-- custom directive that declares a scope -->
-<!-- employees="employees" is getting the 'employees' scope object from the 'EmployeeController' and storing it to 'employees' -->
-<random-employee employees="employees" title="'Random employee'">
-    <p>Check out our random employee generator</p>
-</random-employee>
+    <!-- custom directive that declares a scope -->
+    <!-- employees="employees" is getting the 'employees' scope object from the 'EmployeeController' and storing it to 'employees' -->
+    <random-employee employees="employees" title="'Random employee'">
+        <!-- we used ng-transclude to include this text on the random.html view -->
+        <p>Check out our random employee generator</p>
+    </random-employee>
+</div>

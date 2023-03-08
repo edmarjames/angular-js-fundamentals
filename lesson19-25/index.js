@@ -168,6 +168,7 @@ myApp.controller('EmployeeController', ['$scope', '$http', function($scope, $htt
 
 myApp.controller('ContactController', ['$scope', '$location', function($scope, $location) {
 
+    // using $location service to route the user to the specified url/route when the 'sendMessage' function is invoked
     $scope.sendMessage = () => {
         $location.path('/contact-success');
     };
