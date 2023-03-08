@@ -175,14 +175,17 @@ myApp.controller('EmployeeController', ['$scope', '$http', function($scope, $htt
 
 
     3. form validation
-        ng-pristine -> when form/input not used yet
-        ng-dirty -> when form/input has been used
+        ng-pristine -> when form/input not used yet -> $pristine
+        ng-dirty -> when form/input has been used -> $dirty
 
         ng-untouched -> when input has not been touched
-        ng-touched -> when input has been touched
+        ng-touched -> when input has been touched -> $touched
+ 
+        ng-valid -> when a form field is valid -> $valid
+        ng-invalid -> when a form field is not valid -> $invalid
 
-        ng-valid -> when a form field is valid
-        ng-invalid -> when a form field is not valid
-
+        ng-disabled -> disables an element conditionally
+        Syntax:
+            <button ng-disabled="contactForm.$invalid"></button>
 */
 

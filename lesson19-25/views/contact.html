@@ -1,4 +1,22 @@
 <div class="content">
+    <div ng-show="contactForm.name.$touched && contactForm.name.$invalid" class="alert alert-danger alert-dismissible fade show w-75" role="alert">
+        Enter a valid name!
+        <button type="button" class="close shadow-none" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div ng-show="contactForm.email.$touched && contactForm.email.$invalid" class="alert alert-danger alert-dismissible fade show w-75" role="alert">
+        Enter a valid email!
+        <button type="button" class="close shadow-none" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div ng-show="contactForm.message.$touched && contactForm.message.$invalid" class="alert alert-danger alert-dismissible fade show w-75" role="alert">
+        Enter a valid message!
+        <button type="button" class="close shadow-none" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
     <form name="contactForm" novalidate>
         <input 
             type="text" 
@@ -20,6 +38,6 @@
             ng-model="contact.message" 
             ng-required="true"
         ></textarea>
-        <input type="submit" value="send">
+        <input type="submit" value="send" ng-disabled="contactForm.$invalid">
     </form>
 </div>
