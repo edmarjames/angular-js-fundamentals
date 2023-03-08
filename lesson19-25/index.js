@@ -58,6 +58,7 @@ myApp.directive('randomEmployee', [function () {
         },
         templateUrl: './views/random.html',
         transclude: true,
+        replace: true,
         controller: function($scope) {
             $scope.random = Math.floor(Math.random() * 3);
         }
@@ -156,6 +157,12 @@ myApp.controller('EmployeeController', ['$scope', '$http', function($scope, $htt
 
 /* 
     1. transclude and replace
-        transclude -> allows to display what is inside the custom directive tag to be displayed in the view. to allow it just add transclude and set the value to 'true'
+        transclude -> allows to display what is inside the custom directive tag to be displayed in the view. 
+        
+        to allow it just add transclude and set the value to 'true'
+
+        replace -> allows to replace the name of the custom directive HTML tag with the outermost element of its view or templateUrl. On this case the outermost element of random.html is div. so instead of 'random-employee' it will be shown as 'div' in the console. 
+
+        to allow it just add replace and set the value to 'true'
 */
 
