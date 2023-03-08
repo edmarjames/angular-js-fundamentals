@@ -1,0 +1,29 @@
+Lesson 1 to 6
+    Intro to Angular.js
+    MVC structure
+    2 way data binding
+    directives
+    expressions
+
+Lesson 7 to 12
+    ng-repeat
+    modules
+    controllers
+    filters
+    ng-include
+    ng-show & ng-hide
+
+Lesson 13 to 18
+    ng-click
+    ng-submit
+    ng-src
+    views and routing
+    JSON and $http service
+    custom directives
+
+Lesson 19 to 25
+    transclude & replace
+    animations
+    form validation
+    $location service
+    pretty url's
