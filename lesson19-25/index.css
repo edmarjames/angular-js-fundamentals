@@ -123,6 +123,14 @@ h1,h2,h3{
     box-shadow: 2px 2px 2px rgba(20,20,20,0.1);
     font-size: 16px;
   }
+
+  .content textarea {
+    width: 90%;
+    padding: 10px 5%;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    margin: 10px 0;
+  }
   
   .content button:nth-child(2){
     float: right;
@@ -175,11 +183,11 @@ h1,h2,h3{
     cursor: pointer;
     margin-left: 10px;
   }
-  /* ----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */
 
 
 /* ---- Animation section ---- */
-  /* The starting CSS styles for the enter animation */
+/* The starting CSS styles for the enter animation */
 main.ng-enter {
   transition: 0.5s linear all;
   opacity: 0;
@@ -219,3 +227,16 @@ main.ng-enter.ng-enter-active {
   transition-duration: 0;
 }
 /* ---------------------- */
+
+
+/* ---- form validation section ---- */
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+
+input.ng-valid.ng-touched, textarea.ng-valid.ng-touched {
+  border: 2px solid green;
+}
+/* --------------------------------- */
+
+

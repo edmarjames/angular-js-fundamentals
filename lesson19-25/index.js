@@ -27,6 +27,9 @@ myApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: './views/jokes.html',
             controller: 'EmployeeController'
         })
+        .when('/contact', {
+            templateUrl: './views/contact.html'
+        })
         .otherwise({
             redirectTo: '/home'
         })
@@ -171,8 +174,15 @@ myApp.controller('EmployeeController', ['$scope', '$http', function($scope, $htt
         CDN can be found here https://docs.angularjs.org/api/ngAnimate. Then register 'ngAnimate' as dependency to our module
 
 
+    3. form validation
+        ng-pristine -> when form/input not used yet
+        ng-dirty -> when form/input has been used
 
+        ng-untouched -> when input has not been touched
+        ng-touched -> when input has been touched
 
+        ng-valid -> when a form field is valid
+        ng-invalid -> when a form field is not valid
 
 */
 
